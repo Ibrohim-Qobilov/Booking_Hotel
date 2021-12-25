@@ -4,15 +4,21 @@ import 'package:booking_hotel/screens/home_page/home_page.dart';
 import 'package:booking_hotel/widgets/Booking_hotel_bottom_navogation_bar.dart';
 // import 'package:booking_hotel/widgets/Booking_hotel_bottom_navogation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 void main() {
   runApp(MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => BottomProvier()),
-      ],
-      child: const MyApp(),
-    ));
+    providers: [
+      ChangeNotifierProvider(create: (_) => BottomNavBarProvider()),
+    ],
+    child: const MyApp(),
+  ));
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+    statusBarIconBrightness: Brightness.dark,
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -21,17 +27,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Booking Hotel',
       theme: ThemeData(
-       
         primarySwatch: Colors.blue,
       ),
       // home: MyBottomBar(model: null,),
-      home: const MyBottomBar(),
+      home: MyBottomNavigationBar(),
     );
   }
 }
-

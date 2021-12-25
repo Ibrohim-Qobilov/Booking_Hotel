@@ -1,81 +1,62 @@
+import 'package:booking_hotel/core/constants/colors.dart';
+import 'package:booking_hotel/provider/bottom_navigation_bar._provider.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
+import 'package:booking_hotel/core/components/size_config.dart';
 import 'package:booking_hotel/core/constants/icons.dart';
-import 'package:booking_hotel/screens/home_page/home_page.dart';
-import 'package:booking_hotel/screens/notifications_page/notifications_page.dart';
-import 'package:booking_hotel/screens/profile_page/profile_page.dart';
-import 'package:booking_hotel/screens/search_page/search_page.dart';
 import 'package:flutter/material.dart';
 
 
-class MyBottomBar extends StatefulWidget {
-  const MyBottomBar({Key? key}) : super(key: key);
-
-  @override
-  _FurnitueBottomNarBarState createState() => _FurnitueBottomNarBarState();
-}
-
-class _FurnitueBottomNarBarState extends State<MyBottomBar> {
-  int _furnitureAppIndexOfIcon = 0;
-  List<Widget> _listOfPage = [];
-  Widget? homePage, search, notificationPage,  profilePage;
-  
-
-  @override
-  void initState() {
-    homePage =  HomePage();
-    search =  SearchPage();
-    notificationPage =  NotificationsPage();
-    profilePage =  ProfilePage();
-   
-    _listOfPage = [
-      homePage!,
-     search!,
-      notificationPage!,
-      profilePage!,
-      
-    ];
-    super.initState();
-  }
+class MyBottomNavigationBar extends StatelessWidget {
+  MyBottomNavigationBar({Key? key}) : super(key: key);
+  late BottomNavBarProvider _provider;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _listOfPage[_furnitureAppIndexOfIcon],
-      bottomNavigationBar: _bottomNavBar(),
-    );
+    
+    SizeConfig().init(context);
+    _provider = context.watch();
+    return Scaffold(bottomNavigationBar: SizedBox(
+      height: getProportionateScreenHeight(83.0),
+      child: BottomNavigationBar(
+        selectedItemColor: constColor.kPeach,
+        type: BottomNavigationBarType.fixed,
+        showUnselectedLabels: false,
+        showSelectedLabels: false,
+        currentIndex: _provider.currentIndex,
+        onTap: _provider.onTap,
+        items: _bottomNavigationBarItems(),
+      ),
+    ),);
   }
 
-  Widget _bottomNavBar() {
-    return BottomNavigationBar(
-      items: [
-        BottomNavigationBarItem(
-          icon: _furnitureAppIndexOfIcon == 0 ? IconName.homeActive : IconName.home,
-          label: "",
-        ),
-        BottomNavigationBarItem(
-          icon: _furnitureAppIndexOfIcon == 1 ? IconName.searchActive : IconName.search,
-          label: "",
-        ),
-        BottomNavigationBarItem(
-          icon:
-              _furnitureAppIndexOfIcon == 2 ? IconName.notificationActive : IconName.notification,
-          label: "",
-        ),
+  List<BottomNavigationBarItem> _bottomNavigationBarItems() {
+    return <BottomNavigationBarItem>[
+      _setBottomNavigationBarItem(
+        _provider.currentIndex == 0
+            ? IconName.homeActive                                                                                                                                                                                                                                                               
+            : IconName.home,
+      ),
+      _setBottomNavigationBarItem(
         
-        BottomNavigationBarItem(
-          icon: _furnitureAppIndexOfIcon == 3
-              ? IconName.profileActive
-              : IconName.profile,
-          label: "",
-        ),
-      ],
-      type: BottomNavigationBarType.shifting,
-      iconSize: 20,
-      elevation: 20,
-      onTap: (index) {
-        setState(() {
-          _furnitureAppIndexOfIcon = index;
-        });
-      },
-    );
+        _provider.currentIndex == 1
+            ? IconName.searchActive
+            : IconName.search,
+      ),
+      _setBottomNavigationBarItem(
+        
+        _provider.currentIndex == 2
+            ? IconName.notificationActive
+            : IconName.notification,
+      ),
+      _setBottomNavigationBarItem(
+        _provider.currentIndex == 3
+            ? IconName.profileActive
+            : IconName.profile,
+      ),
+    ];
   }
+
+  BottomNavigationBarItem _setBottomNavigationBarItem(String assetIcon) =>
+      BottomNavigationBarItem(icon: SvgPicture.asset(assetIcon), label: "");
 }

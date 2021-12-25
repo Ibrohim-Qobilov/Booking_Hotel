@@ -2,14 +2,14 @@ import 'package:flutter_svg/svg.dart';
 
 class IconName{
   // for bottom navigation bar
-  static SvgPicture home = SvgPicture.asset("assets/icons/home.svg");
-  static SvgPicture homeActive = SvgPicture.asset("assets/icons/home.svg",);
-  static SvgPicture search = SvgPicture.asset('assets/icons/search.svg');
-  static SvgPicture searchActive = SvgPicture.asset('assets/icons/search_active.svg');
-  static SvgPicture notification = SvgPicture.asset("assets/icons/bell.svg");
-  static SvgPicture notificationActive = SvgPicture.asset("assets/icons/bell_active.svg");
-  static SvgPicture profile = SvgPicture.asset("assets/icons/user.svg");
-  static SvgPicture profileActive = SvgPicture.asset("assets/icons/user_active.svg");
+  static String home = "assets/icons/home.svg";
+  static String homeActive = "assets/icons/home.svg";
+  static String search = 'assets/icons/search.svg';
+  static String searchActive = 'assets/icons/search_active.svg';
+  static String notification = "assets/icons/bell.svg";
+  static String notificationActive = "assets/icons/bell_active.svg";
+  static String profile = "assets/icons/user.svg";
+  static String profileActive = "assets/icons/user_active.svg";
 
   // for other locations
 
