@@ -1,6 +1,6 @@
 import 'package:booking_hotel/core/components/size_config.dart';
 import 'package:booking_hotel/core/constants/colors.dart';
-import 'package:booking_hotel/core/text_view.dart';
+import 'package:booking_hotel/core/components/text_view.dart';
 import 'package:flutter/material.dart';
 import './home_page_view_model.dart';
 
