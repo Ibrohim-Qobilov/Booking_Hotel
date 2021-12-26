@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../components/export_page.dart';
 
 class TextView {
   Text textView(

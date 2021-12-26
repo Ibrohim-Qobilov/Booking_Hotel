@@ -1,5 +1,3 @@
-import 'package:flutter_svg/svg.dart';
-
 class IconName{
   // for bottom navigation bar
   static String home = "assets/icons/home.svg";

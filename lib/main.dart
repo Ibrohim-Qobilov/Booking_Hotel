@@ -1,10 +1,4 @@
-import 'package:booking_hotel/core/components/app_theme.dart';
-import 'package:booking_hotel/provider/bottom_navigation_bar._provider.dart';
-import 'package:booking_hotel/provider/text_for_provider.dart';
-import 'package:booking_hotel/screens/main_page.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
+import './core/components/export_page.dart';
 
 void main() {
   runApp(MultiProvider(

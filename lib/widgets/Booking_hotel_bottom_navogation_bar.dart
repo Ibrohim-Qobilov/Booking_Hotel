@@ -4,7 +4,7 @@ import 'package:booking_hotel/core/constants/icons.dart';
 import 'package:booking_hotel/provider/bottom_navigation_bar._provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:provider/src/provider.dart';
+import 'package:provider/provider.dart';
 
 class HotelBottomNavBar extends StatelessWidget {
   BottomNavBarProvider? model;

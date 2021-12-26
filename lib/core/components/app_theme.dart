@@ -1,6 +1,4 @@
-import 'package:booking_hotel/core/constants/colors.dart';
-
-import 'package:flutter/material.dart';
+import '../components/export_page.dart';
 
 class AppTheme {
   static final darktheme = ThemeData(
