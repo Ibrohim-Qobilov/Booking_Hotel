@@ -1,6 +1,6 @@
 import '../components/export_page.dart';
 
-class TextView {
+
   Text textView(
     text,
     color,
@@ -16,4 +16,4 @@ class TextView {
       ),
     );
   }
-}
+

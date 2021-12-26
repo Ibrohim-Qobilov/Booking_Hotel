@@ -15,3 +15,5 @@ export 'package:booking_hotel/provider/text_form_provider.dart';
 export 'package:booking_hotel/screens/main_page.dart';
 export  'package:flutter/services.dart';
 export 'package:booking_hotel/widgets/Booking_hotel_bottom_navogation_bar.dart';
+export 'package:booking_hotel/core/components/list_view.dart';
+export 'package:booking_hotel/core/components/text_form_feild.dart';

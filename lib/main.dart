@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Booking Hotel',
       home: const MainPage(),
+      
       // home: MyBottomNavigationBar(),
     );
   }
