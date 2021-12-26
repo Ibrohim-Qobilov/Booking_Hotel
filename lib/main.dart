@@ -33,8 +33,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: MyBottomBar(model: null,),
-      home: MyBottomNavigationBar(),
+      home: HomePage(),
+      // home: MyBottomNavigationBar(),
     );
   }
 }
