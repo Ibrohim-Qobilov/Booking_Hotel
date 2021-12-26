@@ -13,13 +13,13 @@ class IconName{
 
   // for other locations
 
-  static SvgPicture setting = SvgPicture.asset("assets/icons/setting.svg");
-  static SvgPicture promotions = SvgPicture.asset("assets/icons/promotions.svg");
-  static SvgPicture payment =  SvgPicture.asset("assets/icons/payment.svg");
-  static SvgPicture filter = SvgPicture.asset("assets/icons/filter.svg");
-  static SvgPicture help = SvgPicture.asset("assets/icons/help.svg");
-  static SvgPicture yourFavorite = SvgPicture.asset("assets/icons/your_favorite.svg");
-  static SvgPicture favorite = SvgPicture.asset("assets/icons/favorite.svg");
+  static String setting = "assets/icons/setting.svg";
+  static String promotions ="assets/icons/promotions.svg";
+  static String payment =  "assets/icons/payment.svg";
+  static String filter = "assets/icons/filter.svg";
+  static String help = "assets/icons/help.svg";
+  static String yourFavorite ="assets/icons/your_favorite.svg";
+  static String favorite = "assets/icons/favorite.svg";
 
  
 

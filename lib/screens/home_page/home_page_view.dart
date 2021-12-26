@@ -11,7 +11,7 @@ class HomePageView extends HomePageViewModel {
     // Replace this with your build function
     return Scaffold(
       body: SingleChildScrollView(
-        child: Container(
+        child: SizedBox(
           height: MediaQuery.of(context).size.height,
           child: Stack(
             children: [
@@ -33,7 +33,7 @@ class HomePageView extends HomePageViewModel {
                         left: getProportionateScreenWidth(30.0)),
                     child: TextView().textView(
                         "Find place that gives you ultimate calm",
-                        constColor.kGreyLight,
+                        MainColor.kGreyLight,
                         29.0,
                         "Dosis"),
                   ),
@@ -49,10 +49,32 @@ class HomePageView extends HomePageViewModel {
                       topRight: Radius.circular(25.0),
                       topLeft: Radius.circular(25.0),
                     ),
-                    color: constColor.kBlacText,
+                    color: MainColor.kBlacText,
+                  ),
+                  child: Expanded(
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 1,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              TextFormField(),
+                              TextFormField(),
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Column(
+                            children: [],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
