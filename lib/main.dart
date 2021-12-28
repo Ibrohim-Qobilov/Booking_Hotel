@@ -28,7 +28,6 @@ class MyApp extends StatelessWidget {
       title: 'Booking Hotel',
       home: const MainPage(),
       
-      // home: MyBottomNavigationBar(),
     );
   }
 }

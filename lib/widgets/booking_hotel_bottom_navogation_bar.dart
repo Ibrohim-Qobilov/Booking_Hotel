@@ -33,5 +33,5 @@ class HotelBottomNavBar extends StatelessWidget {
         model!.currentTab = idxex;
       },
     );
-  }
 }
+  }
