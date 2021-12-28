@@ -28,6 +28,7 @@ class HotelBottomNavBar extends StatelessWidget {
         ),
       ],
       type: BottomNavigationBarType.fixed,
+      enableFeedback: true,
       currentIndex: _context.currentTab,
       onTap: (int idxex) {
         model!.currentTab = idxex;
