@@ -7,7 +7,7 @@ class SearchRoomPageView extends SearchRoomPageViewModel {
   Widget build(BuildContext context) {
     
     // Replace this with your build function
-    return Text('Just a placeholder');
+    return Scaffold(body: Center(child: Text("Search a room"),),);
   }
 }
 
