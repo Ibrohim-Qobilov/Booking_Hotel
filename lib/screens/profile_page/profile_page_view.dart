@@ -1,4 +1,5 @@
 import 'package:booking_hotel/core/components/export_page.dart';
+import 'package:booking_hotel/screens/help_page/help_page.dart';
 import 'package:booking_hotel/screens/payment_page/payment_page.dart';
 import 'package:booking_hotel/screens/your_favorite_page/your_favorite_page.dart';
 import './profile_page_view_model.dart';
@@ -20,7 +21,7 @@ class ProfilePageView extends ProfilePageViewModel {
                 "Nimadur ism"),
             settingMethod(IconName.yourFavorite, "Your Favorite", YourFavoritePage()),
             settingMethod(IconName.promotions, "Payments", PaymentPage()),
-            settingMethod(IconName.help, "Help", YourFavoritePage()),
+            settingMethod(IconName.help, "Help", HelpPage()),
             settingMethod(IconName.promotions, "Promotions", YourFavoritePage()),
             settingMethod(IconName.setting, "Settings", YourFavoritePage()),
           ],
