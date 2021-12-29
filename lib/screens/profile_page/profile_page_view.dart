@@ -23,7 +23,7 @@ class ProfilePageView extends ProfilePageViewModel {
                 "https://images.unsplash.com/photo-1640558378987-74741517e220?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMjF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
                 "Nimadur ism"),
             settingMethod(IconName.yourFavorite, "Your Favorite", YourFavoritePage()),
-            settingMethod(IconName.promotions, "Payments", PaymentPage()),
+            settingMethod(IconName.payment, "Payments", PaymentPage()),
             settingMethod(IconName.help, "Help", HelpPage()),
             settingMethod(IconName.promotions, "Promotions", PromotionsPage()),
             settingMethod(IconName.setting, "Settings", SettingPage()),
