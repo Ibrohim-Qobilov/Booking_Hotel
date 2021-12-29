@@ -7,6 +7,7 @@ import 'package:booking_hotel/core/components/export_page.dart';
 class DropDown {
   static String selectValue = "Guests";
   static String selectValue2 = "Night";
+  static String selectValue3 = "Sf, USA - 2 guest - Jan 18 - Jan 23";
   static List<DropdownMenuItem<String>> get dropdownItems {
     List<DropdownMenuItem<String>> menuItems = const [
       DropdownMenuItem(child: Text("Guests"), value: "Guests"),
@@ -22,6 +23,15 @@ class DropDown {
       DropdownMenuItem(child: Text("Day"), value: "Day"),
       DropdownMenuItem(child: Text("Week"), value: "Week"),
       DropdownMenuItem(child: Text("Month"), value: "Month"),
+    ];
+    return menuItems;
+  }
+  static List<DropdownMenuItem<String>> get dropdwnItems3{
+    List<DropdownMenuItem<String>> menuItems = const [
+      DropdownMenuItem(child: Text('Sf, USA - 2 guest - Jan 18 - Jan 23'),value: "Sf, USA - 2 guest - Jan 18 - Jan 23",),
+      DropdownMenuItem(child: Text('Sf, USA - 3 guest - Jan 20 - Jan 27'),value: "Sf, USA - 2 guest - Jan 20 - Jan 27",),
+      DropdownMenuItem(child: Text('Sf, USA - 6 guest - Jan 23 - Jan 30'),value: "Sf, USA - 2 guest - Jan 23 - Jan 30",),
+      DropdownMenuItem(child: Text('Sf, USA - 10 guest - Jan 24 - Jan 31'),value: "Sf, USA - 2 guest - Jan 24 - Jan 31",),
     ];
     return menuItems;
   }
