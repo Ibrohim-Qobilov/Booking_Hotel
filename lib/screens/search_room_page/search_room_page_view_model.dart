@@ -1,6 +1,7 @@
 import 'package:booking_hotel/core/components/drop_down_view.dart';
 import 'package:booking_hotel/core/components/export_page.dart';
 import 'package:booking_hotel/screens/filter_page/filter_page.dart';
+import 'package:booking_hotel/screens/map_page/map_page.dart';
 import 'package:flutter/material.dart';
 import './search_room_page.dart';
 
@@ -41,6 +42,30 @@ abstract class SearchRoomPageViewModel extends State<SearchRoomPage> {
         style: const TextStyle(color: MainColor.kGrey),
       ),
     );
+  }
+
+  Container bottomView() {
+    return Container(
+            width: MediaQuery.of(context).size.width,
+            height: getProportionateScreenHeight(45.0),
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: MainColor.kWhite.withOpacity(0.1),
+                  spreadRadius: 10,
+                  blurRadius: 10,
+                  offset: const Offset(0, 3),
+                )
+              ],
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                textBottom("Filter",FilterPage()),
+                textBottom("Map", MapPage())
+              ],
+            ),
+          );
   }
   // Add your state and logic here
 }
