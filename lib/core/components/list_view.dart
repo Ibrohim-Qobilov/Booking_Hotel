@@ -14,7 +14,7 @@ ListView lisviewbuilder(image,text) {
                       right: getProportionateScreenWidth(20.0),
                     ),
                     child: Container(
-                      alignment: Alignment.bottomCenter,
+                      alignment: Alignment.bottomLeft,
                       height: getProportionateScreenHeight(120.0),
                       width: getProportionateScreenWidth(200.0),
                       decoration: BoxDecoration(

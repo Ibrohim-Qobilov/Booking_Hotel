@@ -186,7 +186,7 @@ class HomePageView extends HomePageViewModel {
                   top: getProportionateScreenHeight(10),
                   bottom: getProportionateScreenHeight(10),
                 ),
-                child: textView("Recomended", MainColor.kGrey, 25.0, ""),
+                child: textView("Recomended", MainColor.kGrey, 25.0, "",FontWeight.normal),
               ),
               Center(
                   child: SizedBox(
