@@ -26,4 +26,5 @@ class IconName{
   static String coffee = 'assets/icons.coffee.svg';
   static String wifi = 'assets/icons.fifi.svg';
   static String coin = 'assets/icons.coins.svg';
+  static String stop = 'assets/icons/stop.svg';
 }
