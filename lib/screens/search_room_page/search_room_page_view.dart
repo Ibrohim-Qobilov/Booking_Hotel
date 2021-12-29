@@ -18,7 +18,7 @@ class SearchRoomPageView extends SearchRoomPageViewModel {
             SizedBox(
               height: getProportionateScreenHeight(20),
             ),
-            drowDOnwMethod(context),
+            drowDonwMethod(context),
             divider(),
             bottomView(),
             divider(),

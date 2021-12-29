@@ -1,6 +1,7 @@
+import 'package:booking_hotel/core/components/container_view.dart';
 import 'package:booking_hotel/core/components/export_page.dart';
 import 'package:booking_hotel/core/components/list_view.dart';
-import 'package:flutter/material.dart';
+
 import './search_page_view_model.dart';
 
 class SearchPageView extends SearchPageViewModel {
@@ -9,14 +10,41 @@ class SearchPageView extends SearchPageViewModel {
     SizeConfig().init(context);
     // Replace this with your build function
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Center(
-            child: SizedBox(height: getProportionateScreenHeight(150.0),child: lisviewbuilder("https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8aG90ZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60", "Mointain hull"),)
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+                height: getProportionateScreenHeight(20),
+              ),
+              drowDonwMethod(context),
+              divider(),
+              bottomView(),
+              divider(),
+              Container(
+                height: getProportionateScreenHeight(900),
+                width: MediaQuery.of(context).size.width,
+                color: MainColor.kOffWhite,
+                
+                  child: ListView.builder(
+                    itemBuilder: (_, __) {
+                      return containerView(
+                          "https://unsplash/rendom/index",
+                          " * 4.4",
+                          "Hotel uzbekistan",
+                          "free food",
+                          "gym",
+                          "free",
+                          "1000");
+                    },
+                    scrollDirection: Axis.vertical,
+                    itemCount: 10,
+                  ),
+                ),
+              
+          ],
+        ),
       ),
     );
   }
