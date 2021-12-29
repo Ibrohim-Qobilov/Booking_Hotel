@@ -1,9 +1,9 @@
 import '../components/export_page.dart';
 
 class AppBarView {
-  static AppBar myAppBar(String title, Color color, leading,action) => AppBar(
+  static AppBar myAppBar(String title, Color color, leading,) => AppBar(
     leading: leading,
-    actions: action,
+    
         title: Text(title),
         backgroundColor: color,
         elevation: 0,

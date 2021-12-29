@@ -1,5 +1,7 @@
 
 
+import 'package:booking_hotel/screens/room_page/room_page.dart';
+
 import './core/components/export_page.dart';
 
 void main() {
@@ -28,7 +30,8 @@ class MyApp extends StatelessWidget {
       darkTheme: AppTheme.darktheme,
       debugShowCheckedModeBanner: false,
       title: 'Booking Hotel',
-      home: const MainPage(),
+      // home: const MainPage(),
+      home: RoomPage(),
       
     );
   }
