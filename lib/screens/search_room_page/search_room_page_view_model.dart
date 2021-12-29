@@ -1,5 +1,6 @@
 import 'package:booking_hotel/core/components/drop_down_view.dart';
 import 'package:booking_hotel/core/components/export_page.dart';
+import 'package:booking_hotel/screens/filter_page/filter_page.dart';
 import 'package:flutter/material.dart';
 import './search_room_page.dart';
 
@@ -28,6 +29,18 @@ abstract class SearchRoomPageViewModel extends State<SearchRoomPage> {
             child: DropDown.dropdownButton2(
                 DropDown.dropdwnItems3, DropDown.selectValue3),
           );
+  }
+   Divider divider() => const Divider(color: MainColor.kGrey,);
+   TextButton textBottom(text,textPage,) {
+    return TextButton(
+      onPressed: () {
+        Navigator.push(context,MaterialPageRoute(builder: (_) => textPage));
+      },
+      child:  Text(
+        text,
+        style: const TextStyle(color: MainColor.kGrey),
+      ),
+    );
   }
   // Add your state and logic here
 }
