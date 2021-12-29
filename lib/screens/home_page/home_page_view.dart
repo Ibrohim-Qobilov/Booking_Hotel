@@ -1,3 +1,4 @@
+import 'package:booking_hotel/core/components/drop_down_view.dart';
 import 'package:booking_hotel/core/components/export_page.dart';
 import 'package:booking_hotel/core/components/list_view.dart';
 import 'package:booking_hotel/core/components/text_form_feild.dart';
@@ -52,7 +53,7 @@ class HomePageView extends HomePageViewModel {
                     padding:
                         EdgeInsets.only(top: getProportionateScreenHeight(300)),
                     child: Container(
-                      height: getProportionateScreenHeight(274),
+                      height: getProportionateScreenHeight(294),
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.vertical(
@@ -68,11 +69,11 @@ class HomePageView extends HomePageViewModel {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Container(
-                                height: getProportionateScreenHeight(55),
+                                height: getProportionateScreenHeight(60.0),
                                 width: getProportionateScreenWidth(220),
                                 margin: EdgeInsets.only(
                                   top: getProportionateScreenHeight(30),
-                                  bottom: getProportionateScreenHeight(10),
+                                  bottom: getProportionateScreenHeight(10.0),
                                   left: getProportionateScreenWidth(10),
                                   right: getProportionateScreenWidth(10),
                                 ),
@@ -91,14 +92,16 @@ class HomePageView extends HomePageViewModel {
                                   borderRadius: BorderRadius.circular(50),
                                   color: MainColor.kBlack19,
                                 ),
-                                height: getProportionateScreenHeight(55),
+                                height: getProportionateScreenHeight(60.0),
                                 width: getProportionateScreenWidth(102),
                                 margin: EdgeInsets.only(
                                   left: getProportionateScreenWidth(10),
-                                  top: getProportionateScreenHeight(10),
+                                  top: getProportionateScreenHeight(30),
                                   right: getProportionateScreenHeight(10),
                                 ),
-                                // for drop down
+                               child: DropDown.dropdownButton(
+                                      DropDown.dropdownItems,
+                                      DropDown.selectValue),
                               ),
                             ],
                           ),
@@ -106,12 +109,13 @@ class HomePageView extends HomePageViewModel {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Container(
-                                height: getProportionateScreenHeight(55),
+                                height: getProportionateScreenHeight(60.0),
                                 width: getProportionateScreenWidth(220),
                                 margin: EdgeInsets.only(
+                                 top: getProportionateScreenHeight(10),
+                                  bottom: getProportionateScreenHeight(10.0),
                                   left: getProportionateScreenWidth(10),
                                   right: getProportionateScreenWidth(10),
-                                  top: getProportionateScreenHeight(10),
                                 ),
                                 child: textFormfield("Date",
                                     TextFormfieldProvider.dateController),
@@ -128,7 +132,7 @@ class HomePageView extends HomePageViewModel {
                                   borderRadius: BorderRadius.circular(50),
                                   color: MainColor.kBlack19,
                                 ),
-                                height: getProportionateScreenHeight(55),
+                                height: getProportionateScreenHeight(60.0),
                                 width: getProportionateScreenWidth(102),
                                 margin: EdgeInsets.only(
                                   left: getProportionateScreenWidth(10),
@@ -138,11 +142,19 @@ class HomePageView extends HomePageViewModel {
                                   top: getProportionateScreenHeight(10),
                                 ),
                                 // for drop down
+                                child: DropDown.dropdownButton(
+                                      DropDown.dropdownItems2,
+                                      DropDown.selectValue2),
                               ),
                             ],
                           ),
                           InkWell(
-                            onTap: () {Navigator.push(context, MaterialPageRoute(builder: (_)=> SearchRoomPage()));},
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => SearchRoomPage()));
+                            },
                             child: Container(
                               alignment: Alignment.center,
                               margin: EdgeInsets.only(
@@ -183,7 +195,6 @@ class HomePageView extends HomePageViewModel {
                     "https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8aG90ZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
                     "Mointain hull"),
               )),
-              
             ],
           ),
         ),
