@@ -1,9 +1,5 @@
 import 'package:booking_hotel/core/components/app_bar_view.dart';
 import 'package:booking_hotel/core/components/export_page.dart';
-import 'package:booking_hotel/core/constants/colors.dart';
-import 'package:booking_hotel/core/constants/icons.dart';
-import 'package:booking_hotel/screens/reservation_page/reservation_page.dart';
-import 'package:flutter_svg/svg.dart';
 
 import './room_page_view_model.dart';
 

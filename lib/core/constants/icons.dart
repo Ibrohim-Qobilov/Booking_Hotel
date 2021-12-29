@@ -18,6 +18,8 @@ class IconName{
   static String help = "assets/icons/help.svg";
   static String yourFavorite ="assets/icons/your_favorite.svg";
   static String favorite = "assets/icons/favorite.svg";
+  static String walk = 'assets/icons/welk.svg';
+  static String location = 'assets/icons/location.svg';
 
   //  for rooms
 
