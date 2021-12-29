@@ -7,7 +7,7 @@ class MapPageView extends MapPageViewModel {
   Widget build(BuildContext context) {
     
     // Replace this with your build function
-    return Text('Just a placeholder');
+    return Scaffold(body: Center(child: Text("Map Page"),),);
   }
 }
 
