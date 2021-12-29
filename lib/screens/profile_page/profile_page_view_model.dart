@@ -1,4 +1,5 @@
 import 'package:booking_hotel/core/components/export_page.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 abstract class ProfilePageViewModel extends State<ProfilePage> {
   Container profileMethod(profileImage, profileText) {

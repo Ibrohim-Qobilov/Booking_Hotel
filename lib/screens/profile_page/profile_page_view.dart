@@ -1,4 +1,5 @@
 import 'package:booking_hotel/core/components/export_page.dart';
+import 'package:booking_hotel/core/constants/icons.dart';
 import 'package:booking_hotel/screens/help_page/help_page.dart';
 import 'package:booking_hotel/screens/payment_page/payment_page.dart';
 import 'package:booking_hotel/screens/promotions_page/promotions_page.dart';

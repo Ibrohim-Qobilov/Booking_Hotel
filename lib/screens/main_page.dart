@@ -1,3 +1,7 @@
+import 'package:booking_hotel/provider/bottom_navigation_bar._provider.dart';
+import 'package:booking_hotel/widgets/booking_hotel_bottom_navogation_bar.dart';
+import 'package:provider/provider.dart';
+
 import '../core/components/export_page.dart';
 
 class MainPage extends StatelessWidget {
