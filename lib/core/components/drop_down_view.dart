@@ -2,8 +2,6 @@
 
 import 'package:booking_hotel/core/components/export_page.dart';
 
-
-
 class DropDown {
   static String selectValue = "Guests";
   static String selectValue2 = "Night";
@@ -17,6 +15,7 @@ class DropDown {
     ];
     return menuItems;
   }
+
   static List<DropdownMenuItem<String>> get dropdownItems2 {
     List<DropdownMenuItem<String>> menuItems = const [
       DropdownMenuItem(child: Text("Night"), value: "Night"),
@@ -26,17 +25,31 @@ class DropDown {
     ];
     return menuItems;
   }
-  static List<DropdownMenuItem<String>> get dropdwnItems3{
+
+  static List<DropdownMenuItem<String>> get dropdwnItems3 {
     List<DropdownMenuItem<String>> menuItems = const [
-      DropdownMenuItem(child: Text('Sf, USA - 2 guest - Jan 18 - Jan 23'),value: "Sf, USA - 2 guest - Jan 18 - Jan 23",),
-      DropdownMenuItem(child: Text('Sf, USA - 3 guest - Jan 20 - Jan 27'),value: "Sf, USA - 2 guest - Jan 20 - Jan 27",),
-      DropdownMenuItem(child: Text('Sf, USA - 6 guest - Jan 23 - Jan 30'),value: "Sf, USA - 2 guest - Jan 23 - Jan 30",),
-      DropdownMenuItem(child: Text('Sf, USA - 10 guest - Jan 24 - Jan 31'),value: "Sf, USA - 2 guest - Jan 24 - Jan 31",),
+      DropdownMenuItem(
+        child: Text('Sf, USA - 2 guest - Jan 18 - Jan 23'),
+        value: "Sf, USA - 2 guest - Jan 18 - Jan 23",
+      ),
+      DropdownMenuItem(
+        child: Text('Sf, USA - 3 guest - Jan 20 - Jan 27'),
+        value: "Sf, USA - 2 guest - Jan 20 - Jan 27",
+      ),
+      DropdownMenuItem(
+        child: Text('Sf, USA - 6 guest - Jan 23 - Jan 30'),
+        value: "Sf, USA - 2 guest - Jan 23 - Jan 30",
+      ),
+      DropdownMenuItem(
+        child: Text('Sf, USA - 10 guest - Jan 24 - Jan 31'),
+        value: "Sf, USA - 2 guest - Jan 24 - Jan 31",
+      ),
     ];
     return menuItems;
   }
 
-  static DropdownButtonFormField<String> dropdownButton(var items,var Selectvalue) {
+  static DropdownButtonFormField<String> dropdownButton(
+      var items, var Selectvalue) {
     return DropdownButtonFormField(
       decoration: InputDecoration(
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(50))),
@@ -47,6 +60,22 @@ class DropDown {
           color: MainColor.kGrey),
       value: Selectvalue,
       dropdownColor: MainColor.kBlack19,
+      items: items,
+      onChanged: (String? value) {},
+    );
+  }
+
+  static DropdownButtonFormField<String> dropdownButton2(
+      var items, var Selectvalue) {
+    return DropdownButtonFormField(
+      
+      elevation: 99,
+      style: GoogleFonts.nunito(
+          fontSize: getProportionateScreenHeight(14),
+          fontWeight: FontWeight.bold,
+          color: MainColor.kBlack19),
+      value: Selectvalue,
+      dropdownColor: MainColor.kOffWhite,
       items: items,
       onChanged: (String? value) {},
     );
