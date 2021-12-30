@@ -7,7 +7,7 @@ class ReservationPageView extends ReservationPageViewModel {
   Widget build(BuildContext context) {
     
     // Replace this with your build function
-    return Scaffold(body: Center(child: Text("Reservation"),),);
+    return Text('Just a placeholder');
   }
 }
 
