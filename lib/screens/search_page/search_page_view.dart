@@ -1,6 +1,5 @@
 import 'package:booking_hotel/core/components/container_view.dart';
 import 'package:booking_hotel/core/components/export_page.dart';
-import 'package:booking_hotel/core/components/list_view.dart';
 
 import './search_page_view_model.dart';
 

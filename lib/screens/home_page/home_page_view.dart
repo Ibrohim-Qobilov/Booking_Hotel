@@ -12,9 +12,7 @@ class HomePageView extends HomePageViewModel {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    // Replace this with your build function
     return Scaffold(
-      // backgroundColor: constColor.kWhite,
       resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
         child: Container(

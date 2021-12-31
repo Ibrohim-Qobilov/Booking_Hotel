@@ -1,15 +1,11 @@
-// To parse this JSON data, do
-//
-//     final hotelMOdel = hotelMOdelFromJson(jsonString);
-
 import 'dart:convert';
 
-List<HotelMOdel> hotelMOdelFromJson(String str) => List<HotelMOdel>.from(json.decode(str).map((x) => HotelMOdel.fromJson(x)));
+List<HotelModel> hotelMOdelFromJson(String str) => List<HotelModel>.from(json.decode(str).map((x) => HotelModel.fromJson(x)));
 
-String hotelMOdelToJson(List<HotelMOdel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+String hotelMOdelToJson(List<HotelModel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
-class HotelMOdel {
-    HotelMOdel({
+class HotelModel {
+    HotelModel({
         this.id,
         this.price,
         this.imageMountain,
@@ -37,7 +33,7 @@ class HotelMOdel {
     String? night;
     int? v;
 
-    factory HotelMOdel.fromJson(Map<String, dynamic> json) => HotelMOdel(
+    factory HotelModel.fromJson(Map<String, dynamic> json) => HotelModel(
         id: json["_id"],
         price: json["price"],
         imageMountain: json["imageMountain"],
