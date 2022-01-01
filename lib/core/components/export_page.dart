@@ -14,3 +14,8 @@ export 'package:booking_hotel/screens/main_page.dart';
 export 'package:flutter/services.dart';
 export 'package:flutter/material.dart';
 export 'package:provider/provider.dart';
+export 'package:booking_hotel/core/constants/const_network.dart';
+export 'package:booking_hotel/models/hotel_model.dart';
+export 'package:dio/dio.dart';
+export 'dart:convert';
+export 'dart:io';

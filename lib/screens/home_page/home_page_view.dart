@@ -1,10 +1,8 @@
 import 'package:booking_hotel/core/components/container_view_2.dart';
 import 'package:booking_hotel/core/components/drop_down_view.dart';
 import 'package:booking_hotel/core/components/export_page.dart';
-import 'package:booking_hotel/core/components/list_view.dart';
 import 'package:booking_hotel/core/components/text_form_feild.dart';
 import 'package:booking_hotel/core/components/text_view.dart';
-import 'package:booking_hotel/models/hotel_model.dart';
 import 'package:booking_hotel/screens/search_room_page/search_room_page.dart';
 import 'package:booking_hotel/services/hotel_services.dart';
 import './home_page_view_model.dart';

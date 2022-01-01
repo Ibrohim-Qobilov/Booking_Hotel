@@ -1,8 +1,5 @@
-import 'package:booking_hotel/core/components/app_bar_view.dart';
 import 'package:booking_hotel/core/components/export_page.dart';
-import 'package:booking_hotel/models/hotel_model.dart';
 import 'package:booking_hotel/services/hotel_services.dart';
-
 import './room_page_view_model.dart';
 
 class RoomPageView extends RoomPageViewModel {

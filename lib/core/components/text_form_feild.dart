@@ -18,5 +18,3 @@ TextFormField textFormfield(String hintText, var controller) {
     ),
   );
 }
-
-// googleFonts(16, constColor.kGrey, FontWeight.w400),

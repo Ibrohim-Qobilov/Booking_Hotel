@@ -1,4 +1,4 @@
-import 'dart:convert';
+import '../core/components/export_page.dart';
 
 List<HotelModel> hotelMOdelFromJson(String str) => List<HotelModel>.from(json.decode(str).map((x) => HotelModel.fromJson(x)));
 
