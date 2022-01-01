@@ -14,7 +14,7 @@ class SearchPageView extends SearchPageViewModel {
       body: FutureBuilder(
         future: HotelService().getHotel(),
         builder: (context,AsyncSnapshot<List<HotelModel>> snap) {
-          debugPrint(snap.data.toString());
+          // debugPrint(snap.data.toString());
           if (!snap.hasData) {
             return const Center(child: CircularProgressIndicator());
           } else if (snap.hasError) {
@@ -34,22 +34,22 @@ class SearchPageView extends SearchPageViewModel {
                 bottomView(),
                 divider(),
                 Container(
-                  height: getProportionateScreenHeight(900),
+                  height: MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width,
                   color: MainColor.kOffWhite,
                   child: ListView.builder(
                     itemBuilder: (_, __) {
                       return containerView(
-                          snap.data![__].imageMountain.toString(),
+                          snap.data![__].imageHotel.toString(),
                           " * 4.4",
                           snap.data![__].nameHotel.toString(),
-                          "free food",
+                          snap.data![__].aboutHotel,
                           "gym",
                           "free",
                           snap.data![__].price.toString());
                     },
                     scrollDirection: Axis.vertical,
-                    itemCount: 10,
+                    itemCount: snap.data!.length,
                   ),
                 ),
               ],
