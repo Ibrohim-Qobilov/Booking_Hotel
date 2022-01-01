@@ -1,16 +1,13 @@
 import 'package:booking_hotel/core/components/export_page.dart';
 import 'package:booking_hotel/core/constants/icons.dart';
 import 'package:booking_hotel/screens/reservation_page/reservation_page.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import './room_page.dart';
 
 abstract class RoomPageViewModel extends State<RoomPage> {
   SizedBox hotelInfo(hotelImage,hotelName,price,nights) {
     return SizedBox(
-      child: ListView.builder(
-        itemBuilder: (_, __) {
-          return Padding(
+      child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
               height: getProportionateScreenHeight(400),
@@ -198,11 +195,9 @@ abstract class RoomPageViewModel extends State<RoomPage> {
                 ),
               ),
             ),
-          );
-        },
-        itemCount: 10,
-        scrollDirection: Axis.vertical,
-      ),
+          )
+        
+      
     );
   }
 }

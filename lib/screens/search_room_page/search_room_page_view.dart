@@ -1,9 +1,11 @@
 import 'package:booking_hotel/core/components/container_view.dart';
+import 'package:booking_hotel/core/components/container_view_2.dart';
 import 'package:booking_hotel/core/components/export_page.dart';
 import 'package:booking_hotel/core/components/list_view.dart';
 import 'package:booking_hotel/core/components/text_view.dart';
 import 'package:booking_hotel/models/hotel_model.dart';
 import 'package:booking_hotel/screens/hotels_page/hotels_page.dart';
+import 'package:booking_hotel/services/hotel_services.dart';
 
 import './search_room_page_view_model.dart';
 
@@ -12,14 +14,16 @@ class SearchRoomPageView extends SearchRoomPageViewModel {
   Widget build(BuildContext context) {
     // Replace this with your build function
     return Scaffold(
-        backgroundColor: MainColor.kWhite,
-        body: FutureBuilder(builder: (context, AsyncSnapshot<List<HotelModel>> snap) {
+      backgroundColor: MainColor.kWhite,
+      body: FutureBuilder(
+        future: HotelService().getHotel(),
+        builder: (context, AsyncSnapshot<List<HotelModel>> snap) {
           if (!snap.hasData) {
-            return const Center(
+            return Center(
               child: CircularProgressIndicator(),
             );
           } else if (snap.hasError) {
-            return const Text("Error");
+            return Center(child: Text("Error"));
           } else {
             return SingleChildScrollView(
               child: Column(
@@ -45,17 +49,18 @@ class SearchRoomPageView extends SearchRoomPageViewModel {
                           MaterialPageRoute(builder: (_) => HotelsPage()));
                     },
                     child: SizedBox(
-                        height: getProportionateScreenHeight(150.0),
-                        width: MediaQuery.of(context).size.width,
-                        child: ListView.builder(itemBuilder: (_, __) {
-                          return SizedBox(
-                            height: getProportionateScreenHeight(150.0),
-                            child: lisviewbuilder(
-                              
-                                snap.data![__].imageMountain.toString(),
-                                snap.data![__].nameMountain.toString()),
-                          );
-                        })),
+                      height: getProportionateScreenHeight(150.0),
+                      width: MediaQuery.of(context).size.width,
+                      child: ListView.builder(
+                        itemBuilder: (_, __) {
+                          return containerView2(
+                              snap.data![__].imageMountain.toString(),
+                              snap.data![__].nameMountain.toString());
+                        },
+                        scrollDirection: Axis.horizontal,
+                        itemCount: snap.data!.length,
+                      ),
+                    ),
                   ),
                   InkWell(
                     onTap: () {
@@ -69,13 +74,13 @@ class SearchRoomPageView extends SearchRoomPageViewModel {
                       child: ListView.builder(
                         itemBuilder: (_, __) {
                           return containerView(
-                              "https://unsplash/rendom/index",
+                              snap.data![__].imageHotel,
                               " * 4.4",
-                              "Hotel uzbekistan",
-                              "free food",
+                              snap.data![__].nameHotel.toString(),
+                              snap.data![__].aboutHotel,
                               "gym",
                               "free",
-                              "1000");
+                              snap.data![__].price.toString());
                         },
                         scrollDirection: Axis.vertical,
                         itemCount: 10,
@@ -86,6 +91,8 @@ class SearchRoomPageView extends SearchRoomPageViewModel {
               ),
             );
           }
-        }));
+        },
+      ),
+    );
   }
 }

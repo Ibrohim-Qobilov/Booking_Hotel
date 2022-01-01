@@ -1,5 +1,7 @@
 import 'package:booking_hotel/core/components/app_bar_view.dart';
 import 'package:booking_hotel/core/components/export_page.dart';
+import 'package:booking_hotel/models/hotel_model.dart';
+import 'package:booking_hotel/services/hotel_services.dart';
 
 import './room_page_view_model.dart';
 
@@ -10,19 +12,49 @@ class RoomPageView extends RoomPageViewModel {
     // Replace this with your build function
     return Scaffold(
       backgroundColor: MainColor.kOffWhite,
-      appBar: AppBarView.myAppBar(
-        "Hotel name",
-        MainColor.kOffWhite,
-        const Icon(
-          Icons.arrow_back_ios,
-          color: Colors.black,
+      appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.black),
+        backgroundColor: MainColor.kWhite,
+        elevation: 0,
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+            const
+            Icon(Icons.arrow_back_ios_outlined);
+          },
         ),
+        title: const Text("Room Service",style: TextStyle(color: MainColor.kBlack),),
       ),
-      body: hotelInfo(
-        "https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8aG90ZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-        "Hotel Name",
-        "1400",
-        "2 night",
+      body: FutureBuilder(
+        future: HotelService().getHotel(),
+        builder: (context, AsyncSnapshot<List<HotelModel>> snap) {
+          if (!snap.hasData) {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          } else if (snap.hasError) {
+            return const Center(
+              child: Text("Error"),
+            );
+          } else {
+            return ListView.builder(
+              itemBuilder: (_, __) {
+                return SizedBox(
+                  height: getProportionateScreenHeight(430),
+                  width: getProportionateScreenWidth(400.0),
+                  child: hotelInfo(
+                    snap.data![__].imageRoom.toString(),
+                    snap.data![__].nameHotel.toString(),
+                    snap.data![__].price.toString(),
+                    snap.data![__].night.toString(),
+                  ),
+                );
+              },
+              scrollDirection: Axis.vertical,
+              itemCount: snap.data!.length,
+            );
+          }
+        },
       ),
     );
   }

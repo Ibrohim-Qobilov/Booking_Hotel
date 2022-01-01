@@ -1,10 +1,8 @@
 import '../components/export_page.dart';
 
-ListView lisviewbuilder(image, text) {
-  return ListView.builder(
-    scrollDirection: Axis.horizontal,
-    itemBuilder: (_, __) {
-      return Padding(
+Padding containerView2(image, text) {
+  return
+  Padding(
         padding: EdgeInsets.only(
           top: getProportionateScreenHeight(10.0),
           bottom: getProportionateScreenHeight(10.0),
@@ -22,12 +20,13 @@ ListView lisviewbuilder(image, text) {
                 fit: BoxFit.cover,
               ),
               color: Colors.green),
-          child: Text(
-            text,
-            style: TextStyle(fontSize: getProportionateScreenWidth(20)),
+          child: Padding(
+            padding:  EdgeInsets.only(left: getProportionateScreenWidth(25.0),),
+            child: Text(
+              text,
+              style: TextStyle(fontSize: getProportionateScreenWidth(20)),
+            ),
           ),
         ),
       );
-    },
-  );
 }
