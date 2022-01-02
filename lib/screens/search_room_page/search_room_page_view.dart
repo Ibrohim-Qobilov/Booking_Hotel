@@ -19,11 +19,11 @@ class SearchRoomPageView extends SearchRoomPageViewModel {
         future: HotelService().getHotel(),
         builder: (context, AsyncSnapshot<List<HotelModel>> snap) {
           if (!snap.hasData) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           } else if (snap.hasError) {
-            return Center(child: Text("Error"));
+            return const Center(child: Text("Error"));
           } else {
             return SingleChildScrollView(
               child: Column(
