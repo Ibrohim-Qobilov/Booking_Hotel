@@ -2,7 +2,6 @@ import 'package:booking_hotel/core/components/container_view_2.dart';
 import 'package:booking_hotel/core/components/export_page.dart';
 import 'package:booking_hotel/screens/room_page/room_page.dart';
 import 'package:booking_hotel/services/hotel_services.dart';
-
 import './map_page_view_model.dart';
 
 class MapPageView extends MapPageViewModel {
@@ -46,8 +45,9 @@ class MapPageView extends MapPageViewModel {
                     child: SizedBox(
                       height: getProportionateScreenHeight(150.0),
                       child: InkWell(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (_)=> RoomPage()));
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (_) => RoomPage()));
                         },
                         child: ListView.builder(
                           itemBuilder: (_, __) {
@@ -59,7 +59,7 @@ class MapPageView extends MapPageViewModel {
                         ),
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             );
