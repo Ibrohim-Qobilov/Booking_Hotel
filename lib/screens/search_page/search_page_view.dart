@@ -12,6 +12,7 @@ class SearchPageView extends SearchPageViewModel {
     SizeConfig().init(context);
     // Replace this with your build function
     return Scaffold(
+      backgroundColor: MainColor.kWhite,
       body: FutureBuilder(
         future: HotelService().getHotel(),
         builder: (context, AsyncSnapshot<List<HotelModel>> snap) {
