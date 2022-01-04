@@ -25,8 +25,8 @@
 </p>
 <p>
   <img src="./screenshots/filter.png" width=45% />
-</a>
 
+</p>
 
   <a href="./release/app-release.apk?raw=true">Download app now</a>
   <a href="https://github.com/ibrokhim-kobilov/booking_hotel_backend">NodeJs file</a>
