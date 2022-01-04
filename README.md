@@ -1,20 +1,30 @@
 # booking_hotel
 
-A new Flutter project.
+<h1>Bu mehmonxonalar app uchun ui va baskend qismini esa nodeJs yordami bilan tayyorlandi qisqa vaqtda qilingani uchun ham chala joylari ham bo‘lishi mumkin</h1>
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+<p> 
+  <img src="./screenshots/Home.png" width=45% />
+  <img src="./screenshots/list.png" width=45% />
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+<p> 
+  <img src="./screenshots/map.png" width=45% />
+  <img src="./screenshots/notification.png" width=45% />
+</p>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# Booking_Hotel
-# Booking_Hotel-
-# Booking_Hotel-
-# Booking_Hotel
+<p> 
+  <img src="./screenshots/profile.png" width=45% />
+  <img src="./screenshots/search.png" width=45% />
+</p>
+
+
+<p> 
+  <img src="./screenshots/room.png" width=45% />
+  <img src="./screenshots/rooms.png" width=45% />
+</p>
+
+<a href="https://github.com/ibrokhim-kobilov/booking_hotel_backend">NodeJs</a>
+
+<a href="./release/app-release.apk?raw=true">Download now</a>

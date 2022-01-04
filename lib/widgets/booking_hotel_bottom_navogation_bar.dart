@@ -1,9 +1,6 @@
 // ignore_for_file: file_names
 import 'package:booking_hotel/core/constants/icons.dart';
-import 'package:booking_hotel/provider/bottom_navigation_bar._provider.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:provider/src/provider.dart';
-
 import '../core/components/export_page.dart';
 
 // ignore: must_be_immutable
