@@ -1,8 +1,4 @@
 import 'package:booking_hotel/core/components/export_page.dart';
-import 'package:booking_hotel/core/components/size_config.dart';
-import 'package:booking_hotel/core/constants/colors.dart';
-import 'package:booking_hotel/screens/search_room_page/search_room_page.dart';
-import 'package:flutter/material.dart';
 import './notifications_page_view_model.dart';
 
 class NotificationsPageView extends NotificationsPageViewModel {
