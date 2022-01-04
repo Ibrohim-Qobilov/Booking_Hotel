@@ -5,26 +5,27 @@
 
 <p> 
   <img src="./screenshots/home1.png" width=45% />
-  <img src="./screenshots/list.png" width=45% />
-</p>
-
-<p> 
-  <img src="./screenshots/map.png" width=45% />
+  <img src="./screenshots/search1.png" width=45% />\
   <img src="./screenshots/notifications.png" width=45% />
+  
 </p>
-
 
 <p> 
   <img src="./screenshots/profile1.png" width=45% />
-  <img src="./screenshots/search1.png" width=45% />
+  <img src="./screenshots/map.png" width=45% />
+  <img src="./screenshots/list.png" width=45% />
 </p>
+  
 
 
 <p> 
-  <img src="./screenshots/room.png" width=45% />
+<img src="./screenshots/room.png" width=45% />
   <img src="./screenshots/rooms.png" width=45% />
+  <img src="./screenshots/filter.png" width=45% />  
 </p>
 
-<a href="https://github.com/ibrokhim-kobilov/booking_hotel_backend">NodeJs</a>
+<p>
+  <a href="./release/app-release.apk?raw=true">Download app now</a>
+  <a href="https://github.com/ibrokhim-kobilov/booking_hotel_backend">NodeJs file</a>
+</p>
 
-<a href="./release/app-release.apk?raw=true">Download now</a>

@@ -1,9 +1,8 @@
 import 'package:booking_hotel/core/components/const.dart';
 import 'package:booking_hotel/core/components/export_page.dart';
 import 'package:booking_hotel/core/components/list_tile_for_filter.dart';
-import 'package:booking_hotel/core/constants/colors.dart';
 import 'package:booking_hotel/provider/theme_provider.dart';
-import 'package:flutter/material.dart';
+
 import './filter_page_view_model.dart';
 
 class FilterPageView extends FilterPageViewModel {
@@ -38,23 +37,7 @@ class FilterPageView extends FilterPageViewModel {
                 switchlisttile("Breakfast Included", Types.valueforbreakfast),
                 switchlisttile("Deals", Types.valueforDeals),
                 switchlisttile("Only show available", Types.valueforShow),
-                SwitchListTile(
-                  activeColor: MainColor.pink,
-                  value: Types.valueoftheme,
-                  onChanged: (e) {
-                    if (Types.valueoftheme == false) {
-                      Provider.of<ThemeProvider>(context, listen: false)
-                          .changeTheme();
-                    } else {
-                      Provider.of<ThemeProvider>(context, listen: false)
-                          .returnTheme();
-                    }
-                  },
-                  title: const Text(
-                    "Dark theme",
-                    style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600,color: MainColor.kBlacText),
-                  ),
-                ),
+                
                 Padding(
                   padding: const EdgeInsets.all(20),
                   child: InkWell(
