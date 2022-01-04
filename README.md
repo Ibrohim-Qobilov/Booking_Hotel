@@ -4,19 +4,19 @@
 
 
 <p> 
-  <img src="./screenshots/home.png" width=45% />
+  <img src="./screenshots/home1.png" width=45% />
   <img src="./screenshots/list.png" width=45% />
 </p>
 
 <p> 
   <img src="./screenshots/map.png" width=45% />
-  <img src="./screenshots/notification.png" width=45% />
+  <img src="./screenshots/notifications.png" width=45% />
 </p>
 
 
 <p> 
-  <img src="./screenshots/profile.png" width=45% />
-  <img src="./screenshots/search.png" width=45% />
+  <img src="./screenshots/profile1.png" width=45% />
+  <img src="./screenshots/search1.png" width=45% />
 </p>
 
 
