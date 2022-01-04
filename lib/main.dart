@@ -1,9 +1,5 @@
 
-
 import 'package:booking_hotel/provider/theme_provider.dart';
-import 'package:booking_hotel/screens/hotels_page/hotels_page.dart';
-import 'package:booking_hotel/screens/room_page/room_page.dart';
-
 import './core/components/export_page.dart';
 
 void main() {

@@ -4,7 +4,7 @@
 
 
 <p> 
-  <img src="./screenshots/Home.png" width=45% />
+  <img src="./screenshots/home.png" width=45% />
   <img src="./screenshots/list.png" width=45% />
 </p>
 
