@@ -1,6 +1,6 @@
 # booking_hotel
 
-<h1>Bu mehmonxonalar app uchun ui va baskend qismini esa nodeJs yordami bilan tayyorlandi qisqa vaqtda qilingani uchun ham chala joylari ham bo‘lishi mumkin</h1>
+<h1>Bu mehmonxonalar app uchun ui va baskend qismini esa nodeJs yordami bilan tayyorlandi qisqa vaqtda tayyorlangani uchun ham chala joylari bo‘lishi mumkin</h1>
 
 
 <p> 
