@@ -8,20 +8,20 @@
 
 
 <p> 
-  <img src="./screenshots/home1.png" width=33% />
-  <img src="./screenshots/search1.png" width=33% />
-  <img src="./screenshots/notifications.png" width=33% />
+  <img src="./screenshots/home1.png" width=30% />
+  <img src="./screenshots/search1.png" width=30% />
+  <img src="./screenshots/notifications.png" width=30% />
 </p>
 <p> 
   
-  <img src="./screenshots/profile1.png" width=33% />
-  <img src="./screenshots/map.png" width=33% />
-  <img src="./screenshots/list.png" width=33% />
+  <img src="./screenshots/profile1.png" width=30% />
+  <img src="./screenshots/map.png" width=30% />
+  <img src="./screenshots/list.png" width=30% />
 </p>
 <p> 
-  <img src="./screenshots/room.png" width=33% />
-  <img src="./screenshots/rooms.png" width=33% /> 
-  <img src="./screenshots/filter.png" width=33% />
+  <img src="./screenshots/room.png" width=30% />
+  <img src="./screenshots/rooms.png" width=30% /> 
+  <img src="./screenshots/filter.png" width=30% />
 </p>
   <a href="./release/app-release.apk?raw=true">Download app now</a>  
   <a href="https://github.com/ibrokhim-kobilov/booking_hotel_backend">NodeJs file</a>
