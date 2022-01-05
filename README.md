@@ -23,8 +23,8 @@
   <img src="./screenshots/rooms.png" width=30% /> 
   <img src="./screenshots/filter.png" width=30% />
 </p>
-  <h1 href="./release/app-release.apk?raw=true">Download app now</h1>  
-  <h1 href="https://github.com/ibrokhim-kobilov/booking_hotel_backend">NodeJs file</h1>
+  <a href="./release/app-release.apk?raw=true">Download app now</a>
+  <a href="https://github.com/ibrokhim-kobilov/booking_hotel_backend">NodeJs file</a>
 
 
 
