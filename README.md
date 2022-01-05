@@ -1,6 +1,6 @@
 # booking_hotel
 
-<h1>Bu mehmonxonalar uchun app uchun ui va baskend qismini esa nodeJs yordami bilan tayyorlandi qisqa vaqtda tayyorlangani uchun ham chala joylari bo‘lishi mumkin</h1>
+<h1>Bu mehmonxonalar uchun app ui va baskend qismini esa nodeJs yordami bilan tayyorlandi qisqa vaqtda tayyorlangani uchun ham chala joylari bo‘lishi mumkin</h1>
 
 <h1>Without extra packages</h1>
 <h1>Worked with mvvm</h1>
